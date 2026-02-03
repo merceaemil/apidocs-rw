@@ -1,0 +1,130 @@
+{
+  "icglrId": "RW-1.9403+29.8739-00001",
+  "addressCountry": "RW",
+  "nationalId": "RW-MINE-2024-001",
+  "certificationStatus": 2,
+  "activityStatus": 1,
+  "mineSiteLocation": {
+      "geolocalization": {
+        "lat": -1.9403,
+        "long": 29.8739
+      },
+    "nationalCadasterLocalization": "Rwanda Mining Cadaster - Sector 12, Block 5",
+    "localGeographicDesignation": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-02",
+      "subnationalDivisionL1Text": "Southern",
+      "subnationalDivisionL2": "Nyaruguru District",
+      "addressLocalityText": "Muhanga"
+    },
+    "polygon": {
+      "type": "Polygon",
+      "coordinates": [[[29.8739, -1.9403], [29.8743, -1.9403], [29.8743, -1.9399], [29.8739, -1.9399], [29.8739, -1.9403]]]
+    },
+    "altitude": 1500
+  },
+  "mineral": [
+    "2615.90.00",
+    "2609.00.00"
+  ],
+  "license": [
+    {
+      "licenseType": "mining_license",
+      "licenseId": "RW-ML-2024-001",
+      "owner": {
+        "identifier": "COMP-RW-001",
+        "name": "Rwanda Mining Corporation",
+        "legalAddress": {
+          "country": "RW",
+          "subnationalDivisionL1": "RW-01",
+          "subnationalDivisionL1Text": "City of Kigali",
+          "addressLocalityText": "Kigali"
+        },
+        "physicalAddress": {
+          "country": "RW",
+          "subnationalDivisionL1": "RW-01",
+          "subnationalDivisionL1Text": "City of Kigali",
+          "addressLocalityText": "Kigali"
+        },
+        "tin": "RW123456789",
+        "businessType": "Limited Liability Company",
+        "contactDetails": {
+          "legalRepresentative": "Jean Dupont",
+          "contactPhoneNumber": "+250788123456",
+          "contactEmail": "contact@rwandamining.rw"
+        }
+      },
+      "grantedDate": "2024-01-15",
+      "expiringDate": "2029-01-14",
+      "licenseStatus": "1",
+      "coveredCommodities": [
+        "2615.90.00",
+        "2609.00.00"
+      ]
+    }
+  ],
+  "owner": {
+    "identifier": "COMP-RW-001",
+    "name": "Rwanda Mining Corporation",
+    "legalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "physicalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "tin": "RW123456789",
+    "businessType": "Limited Liability Company",
+    "contactDetails": {
+      "legalRepresentative": "Jean Dupont",
+      "contactPhoneNumber": "+250788123456",
+      "contactEmail": "contact@rwandamining.rw"
+    }
+  },
+  "allowedTags": 100,
+  "operator": [],
+  "inspection": [
+    {
+      "inspectionId": "PS-2024-01-15-10-30",
+      "inspectionDate": "2024-01-15",
+      "inspectionResponsible": "Rwanda Mines, Petroleum and Gas Board - Peter Smith",
+      "inspectionResult": 2,
+      "inspectionReport": "https://reports.rmb.rw/inspections/PS-2024-01-15-10-30.pdf",
+      "inspectionPurpose": "Initial certification inspection",
+      "inspectionResults": "Mine site meets all certification requirements. No violations found. Recommended for Green status.",
+      "inspectorName": "Peter Smith",
+      "inspectorPosition": "Senior Mining Inspector",
+      "governmentAgency": "Rwanda Mines, Petroleum and Gas Board",
+      "governmentId": "GOV-RW-001"
+    },
+    {
+      "inspectionId": "PS-2024-03-20-14-00",
+      "inspectionDate": "2024-03-20",
+      "inspectionResponsible": "Rwanda Mines, Petroleum and Gas Board - Peter Smith",
+      "inspectionResult": 1,
+      "inspectionReport": "https://reports.rmb.rw/inspections/PS-2024-03-20-14-00.pdf",
+      "inspectionPurpose": "Follow-up inspection",
+      "inspectionResults": "Minor violations found in safety procedures. Corrective actions required. Status changed to Yellow.",
+      "inspectorName": "Peter Smith",
+      "inspectorPosition": "Senior Mining Inspector",
+      "governmentAgency": "Rwanda Mines, Petroleum and Gas Board",
+      "governmentId": "GOV-RW-001"
+    }
+  ],
+  "statusChange": [
+    {
+      "dateOfChange": "2024-01-15",
+      "newStatus": 1
+    },
+    {
+      "dateOfChange": "2024-03-20",
+      "newStatus": 2
+    }
+  ]
+}
+

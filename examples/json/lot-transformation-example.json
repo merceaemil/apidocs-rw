@@ -1,0 +1,83 @@
+{
+  "lotNumber": "LOT-RW-PROC-2024-001",
+  "dateRegistration": "2024-03-25",
+  "timeRegistration": "14:00:00",
+  "creator": {
+    "identifier": "COMP-RW-002",
+    "name": "Rwanda Processing Center",
+    "legalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-02",
+      "subnationalDivisionL1Text": "Southern",
+      "addressLocalityText": "Huye"
+    },
+    "physicalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-02",
+      "subnationalDivisionL1Text": "Southern",
+      "addressLocalityText": "Huye"
+    },
+    "tin": "987654321",
+    "businessType": "Processing Company",
+    "contactDetails": {
+      "legalRepresentative": "Alice Brown",
+      "contactPhoneNumber": "+250788654321",
+      "contactEmail": "contact@rwandaprocessing.rw"
+    }
+  },
+  "mineral": "2609.00.00",
+  "concentration": 48.0,
+  "mass": 950.0,
+  "packageType": "container",
+  "unitOfMeasurement": "KGM",
+  "price": 48.50,
+  "creatorRole": [4],
+  "recipient": {
+    "identifier": "COMP-RW-003",
+    "name": "Rwanda Export Trading Company",
+    "legalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "physicalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "tin": "987654322",
+    "businessType": "Trading Company",
+    "contactDetails": {
+      "legalRepresentative": "Jane Smith",
+      "contactPhoneNumber": "+250788999888",
+      "contactEmail": "contact@rwandaexport.rw"
+    }
+  },
+  "originatingOperation": [4],
+  "inputLot": [
+    {
+      "lotNumber": "LOT-RW-2024-001"
+    },
+    {
+      "lotNumber": "LOT-RW-2024-002"
+    }
+  ],
+  "taxPaid": [
+    {
+      "taxType": "Processing Tax",
+      "taxAmount": 2000.00,
+      "currency": "USD"
+    }
+  ],
+  "dateSealed": "2024-03-25",
+  "dateShipped": "2024-03-27",
+  "dateIn": "2024-03-22",
+  "transportationMethod": "Truck",
+  "transportationRoute": "Huye to Kigali",
+  "transportCompany": "East Africa Logistics",
+  "responsibleStaff": "Alice Brown, Processing Manager",
+  "exportCertificateId": "RW-EXP-2024-001"
+}
+

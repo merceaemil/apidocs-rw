@@ -1,0 +1,113 @@
+{
+  "lotNumber": "LOT-RW-2024-001",
+  "dateRegistration": "2024-03-20",
+  "timeRegistration": "10:30:00",
+  "creator": {
+    "identifier": "COMP-RW-001",
+    "name": "Rwanda Mining Corporation Ltd",
+    "legalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "physicalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "tin": "123456789",
+    "businessType": "Limited Liability Company",
+    "contactDetails": {
+      "legalRepresentative": "John Doe",
+      "contactPhoneNumber": "+250788123456",
+      "contactEmail": "contact@rwandamining.rw"
+    }
+  },
+  "mineral": "7108.12.00",
+  "concentration": 45.5,
+  "mass": 1000.0,
+  "packageType": "bag",
+  "nrOfPackages": 1,
+  "unitOfMeasurement": "KGM",
+  "mineSiteId": "RW-1.9641+30.0619-00001",
+  "creatorRole": [1],
+  "recipient": {
+    "identifier": "COMP-RW-002",
+    "name": "Rwanda Processing Center",
+    "legalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-02",
+      "subnationalDivisionL1Text": "Southern",
+      "addressLocalityText": "Huye"
+    },
+    "physicalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-02",
+      "subnationalDivisionL1Text": "Southern",
+      "addressLocalityText": "Huye"
+    },
+    "tin": "987654321",
+    "businessType": "Processing Company",
+    "contactDetails": {
+      "legalRepresentative": "Alice Brown",
+      "contactPhoneNumber": "+250788654321",
+      "contactEmail": "contact@rwandaprocessing.rw"
+    }
+  },
+  "price": 45.50,
+  "originatingOperation": [1],
+  "tag": {
+    "identifier": "TAG-RW-2024-001",
+    "issuer": {
+      "identifier": "GOV-RW-001",
+      "name": "Ministry of Mines, Rwanda",
+      "legalAddress": {
+        "country": "RW",
+        "subnationalDivisionL1": "RW-01",
+        "subnationalDivisionL1Text": "City of Kigali",
+        "addressLocalityText": "Kigali"
+      },
+      "physicalAddress": {
+        "country": "RW",
+        "subnationalDivisionL1": "RW-01",
+        "subnationalDivisionL1Text": "City of Kigali",
+        "addressLocalityText": "Kigali"
+      },
+      "tin": "GOV-001",
+      "businessType": "Government Agency",
+      "contactDetails": {
+        "legalRepresentative": "Government Representative",
+        "contactPhoneNumber": "+250788000000",
+        "contactEmail": "mines@gov.rw"
+      }
+    },
+    "issueDate": "2024-03-20",
+    "issueTime": "10:30:00",
+    "representativeRMB": "John Mwangi",
+    "tagType": "QR Code"
+  },
+  "miner": "Jean Baptiste",
+  "taxPaid": [
+    {
+      "taxType": "Mining Royalty",
+      "taxAmount": 5000.00,
+      "currency": "USD",
+      "taxAuthority": "Ministry of Mines",
+      "taxPaidDate": "2024-03-20",
+      "receiptReference": "REC-2024-001"
+    },
+    {
+      "taxType": "Export Tax",
+      "taxAmount": 2500.00,
+      "currency": "USD",
+      "taxAuthority": "Rwanda Revenue Authority",
+      "taxPaidDate": "2024-03-20",
+      "receiptReference": "REC-2024-002"
+    }
+  ],
+  "dateSealed": "2024-03-20",
+  "dateShipped": "2024-03-22",
+  "responsibleStaff": "John Doe, Site Manager"
+}

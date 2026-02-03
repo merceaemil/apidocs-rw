@@ -1,0 +1,70 @@
+{
+  "issuingCountry": "RW",
+  "identifier": "RW-EXP-2024-001",
+  "exporter": {
+    "identifier": "COMP-RW-001",
+    "name": "Rwanda Mining Corporation Ltd",
+    "legalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "physicalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "tin": "123456789",
+    "businessType": "Limited Liability Company",
+    "contactDetails": {
+      "legalRepresentative": "John Doe",
+      "contactPhoneNumber": "+250788123456",
+      "contactEmail": "contact@rwandamining.rw"
+    }
+  },
+  "importer": {
+    "identifier": "COMP-RW-003",
+    "name": "Rwanda Export Trading Company",
+    "legalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "physicalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "tin": "987654321",
+    "businessType": "Trading Company",
+    "contactDetails": {
+      "legalRepresentative": "Jane Smith",
+      "contactPhoneNumber": "+250788999888",
+      "contactEmail": "contact@rwandaexport.rw"
+    }
+  },
+  "lotNumber": "LOT-RW-2024-001",
+  "designatedMineralDescription": "Cassiterite concentrate, 1000kg, 45% Sn",
+  "typeOfOre": "2609.00.00",
+  "lotWeight": 1000.0,
+  "lotWeightUOM": "KGM",
+  "lotGrade": "45%",
+  "mineralOrigin": "RW",
+  "customsValue": "USD 85000.00",
+  "dateOfShipment": "2024-04-15",
+  "shipmentRoute": "RW,KE,TZ",
+  "transportCompany": "East Africa Logistics",
+  "memberStateIssuingAuthority": "Ministry of Trade and Industry, Rwanda",
+  "nameOfVerifier": "Peter Smith",
+  "positionOfVerifier": "Senior Mining Inspector",
+  "idOfVerifier": "GOV-RW-001",
+  "dateOfVerification": "2024-04-10",
+  "nameOfValidator": "Mary Johnson",
+  "dateOfIssuance": "2024-04-12",
+  "dateOfExpiration": "2024-07-11",
+  "certificateFile": "https://certificates.rmb.rw/RW-EXP-2024-001.pdf"
+}

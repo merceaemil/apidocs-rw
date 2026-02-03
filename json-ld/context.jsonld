@@ -1,0 +1,467 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://rwanda.gov.rw/vocab/",
+    "rwanda": "https://rwanda.gov.rw/vocab/",
+    "schema": "https://schema.org/",
+    "dc": "http://purl.org/dc/terms/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    
+    "MineSite": "rwanda:MineSite",
+    "ExportCertificate": "rwanda:ExportCertificate",
+    "Lot": "rwanda:Lot",
+    "License": "rwanda:License",
+    "BusinessEntity": "rwanda:BusinessEntity",
+    "Address": "rwanda:Address",
+    "Geolocalization": "rwanda:Geolocalization",
+    "Inspection": "rwanda:Inspection",
+    "MineSiteLocation": "rwanda:MineSiteLocation",
+    "ContactDetails": "rwanda:ContactDetails",
+    "StatusHistory": "rwanda:StatusHistory",
+    "Tag": "rwanda:Tag",
+    "Tax": "rwanda:Tax",
+    
+    "id": "@id",
+    "type": "@type",
+    
+    "icglrId": {
+      "@id": "rwanda:icglrId",
+      "@type": "xsd:string",
+      "@container": "@id"
+    },
+    "addressCountry": {
+      "@id": "rwanda:addressCountry",
+      "@type": "xsd:string"
+    },
+    "nationalId": {
+      "@id": "rwanda:nationalId",
+      "@type": "xsd:string"
+    },
+    "certificationStatus": {
+      "@id": "rwanda:certificationStatus",
+      "@type": "xsd:integer"
+    },
+    "activityStatus": {
+      "@id": "rwanda:activityStatus",
+      "@type": "xsd:integer"
+    },
+    "mineSiteLocation": {
+      "@id": "rwanda:mineSiteLocation",
+      "@type": "icglr:MineSiteLocation"
+    },
+    "mineral": {
+      "@id": "rwanda:mineral",
+      "@type": "@id"
+    },
+    "license": {
+      "@id": "rwanda:license",
+      "@type": "@id"
+    },
+    "owner": {
+      "@id": "rwanda:owner",
+      "@type": "icglr:BusinessEntity"
+    },
+    "operator": {
+      "@id": "rwanda:operator",
+      "@type": "@id"
+    },
+    "inspection": {
+      "@id": "rwanda:inspection",
+      "@type": "@id"
+    },
+    "statusChange": {
+      "@id": "rwanda:statusChange",
+      "@type": "@id"
+    },
+    
+    "geolocalization": {
+      "@id": "rwanda:geolocalization",
+      "@type": "icglr:Geolocalization"
+    },
+    "lat": {
+      "@id": "geo:lat",
+      "@type": "xsd:decimal"
+    },
+    "long": {
+      "@id": "geo:long",
+      "@type": "xsd:decimal"
+    },
+    "nationalCadasterLocalization": {
+      "@id": "rwanda:nationalCadasterLocalization",
+      "@type": "xsd:string"
+    },
+    "localGeographicDesignation": {
+      "@id": "rwanda:localGeographicDesignation",
+      "@type": "icglr:Address"
+    },
+    "polygon": {
+      "@id": "rwanda:polygon",
+      "@type": "@json"
+    },
+    "altitude": {
+      "@id": "geo:alt",
+      "@type": "xsd:decimal"
+    },
+    
+    "licenseType": {
+      "@id": "rwanda:licenseType",
+      "@type": "xsd:string"
+    },
+    "licenseId": {
+      "@id": "rwanda:licenseId",
+      "@type": "xsd:string"
+    },
+    "appliedDate": {
+      "@id": "rwanda:appliedDate",
+      "@type": "xsd:date"
+    },
+    "grantedDate": {
+      "@id": "rwanda:dateGranted",
+      "@type": "xsd:date"
+    },
+    "expiringDate": {
+      "@id": "rwanda:dateExpiring",
+      "@type": "xsd:date"
+    },
+    "licenseStatus": {
+      "@id": "rwanda:licenseStatus",
+      "@type": "xsd:string"
+    },
+    "coveredCommodities": {
+      "@id": "rwanda:coveredCommodities",
+      "@type": "@id"
+    },
+    
+    "country": {
+      "@id": "schema:addressCountry",
+      "@type": "xsd:string"
+    },
+    "subnationalDivisionL1": {
+      "@id": "rwanda:subnationalDivisionL1",
+      "@type": "xsd:string"
+    },
+    "subnationalDivisionL1Text": {
+      "@id": "rwanda:subnationalDivisionL1Text",
+      "@type": "xsd:string"
+    },
+    "subnationalDivisionL2": {
+      "@id": "rwanda:subnationalDivisionL2",
+      "@type": "xsd:string"
+    },
+    "subnationalDivisionL3": {
+      "@id": "rwanda:subnationalDivisionL3",
+      "@type": "xsd:string"
+    },
+    "subnationalDivisionL4": {
+      "@id": "rwanda:subnationalDivisionL4",
+      "@type": "xsd:string"
+    },
+    "addressLocalityText": {
+      "@id": "rwanda:addressLocalityText",
+      "@type": "xsd:string"
+    },
+    
+    "identifier": {
+      "@id": "rwanda:identifier",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "legalAddress": {
+      "@id": "rwanda:legalAddress",
+      "@type": "icglr:Address"
+    },
+    "physicalAddress": {
+      "@id": "rwanda:physicalAddress",
+      "@type": "icglr:Address"
+    },
+    "tin": {
+      "@id": "rwanda:tin",
+      "@type": "xsd:string"
+    },
+    "contactDetails": {
+      "@id": "rwanda:contactDetails",
+      "@type": "icglr:ContactDetails"
+    },
+    
+    "legalRepresentative": {
+      "@id": "rwanda:legalRepresentative",
+      "@type": "xsd:string"
+    },
+    "contactPhoneNumber": {
+      "@id": "schema:telephone",
+      "@type": "xsd:string"
+    },
+    "contactEmail": {
+      "@id": "schema:email",
+      "@type": "xsd:string"
+    },
+    
+    "inspectionId": {
+      "@id": "rwanda:inspectionId",
+      "@type": "xsd:string"
+    },
+    "inspectionDate": {
+      "@id": "rwanda:inspectionDate",
+      "@type": "xsd:date"
+    },
+    "inspectionResult": {
+      "@id": "rwanda:inspectionResult",
+      "@type": "xsd:integer"
+    },
+    "inspectionReport": {
+      "@id": "rwanda:inspectionReport",
+      "@type": "xsd:anyURI"
+    },
+    "inspectionPurpose": {
+      "@id": "rwanda:inspectionPurpose",
+      "@type": "xsd:string"
+    },
+    "inspectionResults": {
+      "@id": "rwanda:inspectionResults",
+      "@type": "xsd:string"
+    },
+    "inspectorName": {
+      "@id": "rwanda:inspectorName",
+      "@type": "xsd:string"
+    },
+    "inspectorPosition": {
+      "@id": "rwanda:inspectorPosition",
+      "@type": "xsd:string"
+    },
+    "governmentAgency": {
+      "@id": "rwanda:governmentAgency",
+      "@type": "xsd:string"
+    },
+    "governmentId": {
+      "@id": "rwanda:governmentId",
+      "@type": "xsd:string"
+    },
+    
+    "dateOfChange": {
+      "@id": "rwanda:dateOfChange",
+      "@type": "xsd:date"
+    },
+    "newStatus": {
+      "@id": "rwanda:newStatus",
+      "@type": "xsd:integer"
+    },
+    
+    "issuingCountry": {
+      "@id": "rwanda:issuingCountry",
+      "@type": "xsd:string"
+    },
+    "exporter": {
+      "@id": "rwanda:exporter",
+      "@type": "icglr:BusinessEntity"
+    },
+    "importer": {
+      "@id": "rwanda:importer",
+      "@type": "icglr:BusinessEntity"
+    },
+    "lotNumber": {
+      "@id": "rwanda:lotNumber",
+      "@type": "xsd:string"
+    },
+    "designatedMineralDescription": {
+      "@id": "rwanda:designatedMineralDescription",
+      "@type": "xsd:string"
+    },
+    "typeOfOre": {
+      "@id": "rwanda:typeOfOre",
+      "@type": "xsd:string"
+    },
+    "lotWeight": {
+      "@id": "rwanda:lotWeight",
+      "@type": "xsd:decimal"
+    },
+    "lotWeightUOM": {
+      "@id": "rwanda:lotWeightUOM",
+      "@type": "xsd:string"
+    },
+    "lotGrade": {
+      "@id": "rwanda:lotGrade",
+      "@type": "xsd:string"
+    },
+    "mineralOrigin": {
+      "@id": "rwanda:mineralOrigin",
+      "@type": "xsd:string"
+    },
+    "customsValue": {
+      "@id": "rwanda:customsValue",
+      "@type": "xsd:string"
+    },
+    "dateOfShipment": {
+      "@id": "rwanda:dateOfShipment",
+      "@type": "xsd:date"
+    },
+    "shipmentRoute": {
+      "@id": "rwanda:shipmentRoute",
+      "@type": "xsd:string"
+    },
+    "transportCompany": {
+      "@id": "rwanda:transportCompany",
+      "@type": "xsd:string"
+    },
+    "memberStateIssuingAuthority": {
+      "@id": "rwanda:memberStateIssuingAuthority",
+      "@type": "xsd:string"
+    },
+    "nameOfVerifier": {
+      "@id": "rwanda:nameOfVerifier",
+      "@type": "xsd:string"
+    },
+    "positionOfVerifier": {
+      "@id": "rwanda:positionOfVerifier",
+      "@type": "xsd:string"
+    },
+    "idOfVerifier": {
+      "@id": "rwanda:idOfVerifier",
+      "@type": "xsd:string"
+    },
+    "dateOfVerification": {
+      "@id": "rwanda:dateOfVerification",
+      "@type": "xsd:date"
+    },
+    "nameOfValidator": {
+      "@id": "rwanda:nameOfValidator",
+      "@type": "xsd:string"
+    },
+    "dateOfIssuance": {
+      "@id": "rwanda:dateOfIssuance",
+      "@type": "xsd:date"
+    },
+    "dateOfExpiration": {
+      "@id": "rwanda:dateOfExpiration",
+      "@type": "xsd:date"
+    },
+    "certificateFile": {
+      "@id": "rwanda:certificateFile",
+      "@type": "xsd:anyURI"
+    },
+    
+    "dateRegistration": {
+      "@id": "rwanda:dateRegistration",
+      "@type": "xsd:date"
+    },
+    "timeRegistration": {
+      "@id": "rwanda:timeRegistration",
+      "@type": "xsd:time"
+    },
+    "creator": {
+      "@id": "rwanda:creator",
+      "@type": "icglr:BusinessEntity"
+    },
+    "concentration": {
+      "@id": "rwanda:concentration",
+      "@type": "xsd:decimal"
+    },
+    "mass": {
+      "@id": "schema:weight",
+      "@type": "xsd:decimal"
+    },
+    "packageType": {
+      "@id": "rwanda:packageType",
+      "@type": "xsd:string"
+    },
+    "nrOfPackages": {
+      "@id": "rwanda:nrOfPackages",
+      "@type": "xsd:decimal"
+    },
+    "unitOfMeasurement": {
+      "@id": "schema:unitCode",
+      "@type": "xsd:string"
+    },
+    "creatorRole": {
+      "@id": "rwanda:creatorRole",
+      "@type": "@id"
+    },
+    "recipient": {
+      "@id": "rwanda:recipient",
+      "@type": "icglr:BusinessEntity"
+    },
+    "originatingOperation": {
+      "@id": "rwanda:originatingOperation",
+      "@type": "@id"
+    },
+    "inputLot": {
+      "@id": "rwanda:inputLot",
+      "@type": "@id"
+    },
+    "tag": {
+      "@id": "rwanda:tag",
+      "@type": "icglr:Tag"
+    },
+    "taxPaid": {
+      "@id": "rwanda:taxPaid",
+      "@type": "@id"
+    },
+    "dateSealed": {
+      "@id": "rwanda:dateSealed",
+      "@type": "xsd:date"
+    },
+    "dateShipped": {
+      "@id": "rwanda:dateShipped",
+      "@type": "xsd:date"
+    },
+    "purchaseNumber": {
+      "@id": "rwanda:purchaseNumber",
+      "@type": "@id"
+    },
+    "purchaseDate": {
+      "@id": "rwanda:purchaseDate",
+      "@type": "xsd:date"
+    },
+    "responsibleStaff": {
+      "@id": "rwanda:responsibleStaff",
+      "@type": "xsd:string"
+    },
+    "dateIn": {
+      "@id": "rwanda:dateIn",
+      "@type": "xsd:date"
+    },
+    "transportationMethod": {
+      "@id": "rwanda:transportationMethod",
+      "@type": "xsd:string"
+    },
+    "transportationRoute": {
+      "@id": "rwanda:transportationRoute",
+      "@type": "xsd:string"
+    },
+    "exportCertificateId": {
+      "@id": "rwanda:exportCertificateId",
+      "@type": "xsd:string"
+    },
+    
+    "issueDate": {
+      "@id": "rwanda:issueDate",
+      "@type": "xsd:date"
+    },
+    "issueTime": {
+      "@id": "rwanda:issueTime",
+      "@type": "xsd:time"
+    },
+    "issuer": {
+      "@id": "rwanda:issuer",
+      "@type": "icglr:BusinessEntity"
+    },
+    
+    "taxType": {
+      "@id": "rwanda:taxType",
+      "@type": "xsd:string"
+    },
+    "taxAmount": {
+      "@id": "rwanda:taxAmount",
+      "@type": "xsd:decimal"
+    },
+    "currency": {
+      "@id": "schema:priceCurrency",
+      "@type": "xsd:string"
+    }
+  }
+}

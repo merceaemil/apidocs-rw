@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rwanda.gov.rw/schemas/chain-of-custody/tax.json",
+  "title": "MD.13 Tax",
+  "description": "Tax entity - Values and details of all taxes paid",
+  "type": "object",
+  "required": [
+    "taxType",
+    "taxAmount",
+    "currency"
+  ],
+  "properties": {
+    "taxType": {
+      "type": "string",
+      "description": "Textual description of the type of tax"
+    },
+    "taxAmount": {
+      "$ref": "../core/common.json#/definitions/Decimal",
+      "description": "Value of paid tax, expressed in the required currency"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "The currency in which the tax was expressed. Use Currency code of 3 letters (ISO 4217)"
+    },
+    "taxAuthority": {
+      "type": "string",
+      "description": "Tax Authority - Authority who imposed the tax"
+    },
+    "taxPaidDate": {
+      "$ref": "../core/common.json#/definitions/Date",
+      "description": "Tax Paid Date - Date when the tax was paid"
+    },
+    "receiptReference": {
+      "type": "string",
+      "description": "Receipt Reference - Receipt number or other form of reference"
+    }
+  }
+}

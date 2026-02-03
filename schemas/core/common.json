@@ -1,0 +1,217 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rwanda.gov.rw/schemas/core/common.json",
+  "title": "Rwanda Mineral Data Interoperability Standard - Common Data Structures",
+  "description": "Common data structures used across Rwanda Mineral Data Interoperability Standard. Based on the semantic model defined in the Rwanda Mineral Data Interoperability Standard Version 2.3.",
+  "definitions": {
+    "ICGLRMemberState": {
+      "type": "string",
+      "enum": ["RW"],
+      "description": "ICGLR member state ISO 3166-1 alpha-2 code. National rule: It will always be RW for Rwanda"
+    },
+    "Date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "ISO 8601 date format (YYYY-MM-DD)"
+    },
+    "DateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time format"
+    },
+    "Time": {
+      "type": "string",
+      "pattern": "^([0-1][0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?(Z|[+-][0-1][0-9]:[0-5][0-9])?$",
+      "description": "Time format following ISO 8601 extended time hh:mm[:ss] with an optional zone designator Z or ±hh:mm. Example: 08:32:00"
+    },
+    "Decimal": {
+      "type": "number",
+      "description": "Decimal number"
+    },
+    "Identifier": {
+      "type": "string",
+      "description": "A finite sequence of characters that adhere to a format rule, subtype of String"
+    },
+    "String": {
+      "type": "string",
+      "description": "A finite sequence of characters"
+    },
+    "Geolocalization": {
+      "type": "object",
+      "description": "MD.06 Geolocalization - Geographic coordinates. Using the WGS 84 format with 4 decimals, not using cardinal points (N/S/W/E) but - and + signs",
+      "required": ["lat", "long"],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90,
+          "multipleOf": 0.0001,
+          "description": "Latitude in WGS 84 format, decimal degrees with 4 decimals. Example: -1.9641"
+        },
+        "long": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180,
+          "multipleOf": 0.0001,
+          "description": "Longitude in WGS 84 format, decimal degrees with 4 decimals. Example: +30.0619"
+        }
+      }
+    },
+    "Address": {
+      "type": "object",
+      "description": "MD.05 Address",
+      "required": ["country", "addressLocalityText"],
+      "properties": {
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "enum": ["RW"],
+          "description": "An ISO 3166-1 country code. ISO 3166-1 alpha-2 – two-letter country codes. National rule: It will always be RW"
+        },
+        "subnationalDivisionL1": {
+          "type": "string",
+          "enum": ["RW-01", "RW-02", "RW-03", "RW-04", "RW-05"],
+          "description": "Subnational Division Level 1 Code using ISO 3166-2:RW format. Takes value from https://en.wikipedia.org/wiki/ISO_3166-2:RW: RW-01, RW-02, RW-03, RW-04, RW-05"
+        },
+        "subnationalDivisionL1Text": {
+          "type": "string",
+          "enum": ["City of Kigali", "Eastern", "Northern", "Southern", "Western"],
+          "description": "Subnational Division Level 1 in clear text. Takes value from the list of provinces: City of Kigali, Eastern, Northern, Southern, Western"
+        },
+        "subnationalDivisionL2": {
+          "type": "string",
+          "description": "Subnational Division Level 2 - The name of the district, according to each province. For example for Southern Province, it takes value from the list: Gisagara, Huye, Kamonyi, Muhanga, Nyamagabe, Nyanza, Nyaruguru, Ruhango"
+        },
+        "subnationalDivisionL3": {
+          "type": "string",
+          "description": "Subnational Division Level 3 - The name of the sector. For example for Gisagara district, it takes values from the list: Gikonko, Gishubi, Kansi, Kibilizi, Kigembe, Mamba, Muganza, Mugombwa, Mukindo, Musha, Ndora, Nyanza, Save"
+        },
+        "subnationalDivisionL4": {
+          "type": "string",
+          "description": "Subnational Division Level 4 - Does not apply"
+        },
+        "addressLocalityText": {
+          "type": "string",
+          "description": "Locality as free text"
+        },
+        "addressLocalityCode": {
+          "type": "string",
+          "description": "Locality as code, as designated in UPU S42, ISO 19160-1"
+        },
+        "streetAddress": {
+          "type": "string",
+          "description": "Street address"
+        }
+      }
+    },
+    "ContactDetails": {
+      "type": "object",
+      "description": "MD.09 Contact Details",
+      "required": ["legalRepresentative", "contactPhoneNumber", "contactEmail"],
+      "properties": {
+        "legalRepresentative": {
+          "type": "string",
+          "description": "Legal representative name (First name and last name)"
+        },
+        "contactPhoneNumber": {
+          "type": "string",
+          "pattern": "^\\+[1-9]\\d{1,14}$",
+          "description": "E.164 phone format, starting with a plus sign (+), followed by the country code, and then the national number, with a maximum of 15 digits"
+        },
+        "contactEmail": {
+          "type": "string",
+          "format": "email",
+          "pattern": "^[\\w.\\-]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+          "description": "Contact email"
+        }
+      }
+    },
+    "BusinessEntity": {
+      "type": "object",
+      "description": "MD.04 Business Entity",
+      "required": ["identifier", "name", "tin", "businessType", "contactDetails"],
+      "properties": {
+        "identifier": {
+          "$ref": "#/definitions/Identifier",
+          "description": "Unique identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Legal name of the entity, as officially registered"
+        },
+        "legalAddress": {
+          "$ref": "#/definitions/Address",
+          "description": "Legal Address (0..1, optional). Either Legal Address or Physical Address should exist."
+        },
+        "physicalAddress": {
+          "$ref": "#/definitions/Address",
+          "description": "Physical Address (0..1, optional). Either Legal Address or Physical Address should exist."
+        },
+        "tin": {
+          "$ref": "#/definitions/Identifier",
+          "description": "Tax ID Number in Rwanda. If not known, N/A can be used as value"
+        },
+        "rdbNumber": {
+          "$ref": "#/definitions/Identifier",
+          "description": "Registration number from the RDB, if different from the tax ID number. Additional field specific for Rwanda"
+        },
+        "rcaNumber": {
+          "$ref": "#/definitions/Identifier",
+          "description": "Registration number from the Rwanda Cooperative Agency (RCA), if applicable. Additional field specific for Rwanda"
+        },
+        "businessType": {
+          "$ref": "#/definitions/Identifier",
+          "description": "Business Type - Takes value from the types defined by the Rwanda Development Board (RDB)"
+        },
+        "otherInfo": {
+          "type": "string",
+          "description": "Other identifying information if required"
+        },
+        "contactDetails": {
+          "$ref": "#/definitions/ContactDetails",
+          "description": "MD.09 Contact Details - Group of business terms holding contact details of entity"
+        }
+      }
+    },
+    "CertificationStatus": {
+      "type": "integer",
+      "enum": [0, 1, 2, 3],
+      "description": "MDC.01 Certification Status: 0=Blue (Uninspected), 1=Green (Certified), 2=Yellow (Yellow-Flagged), 3=Red (Un-Certified)"
+    },
+    "MiningActivityStatus": {
+      "type": "integer",
+      "enum": [0, 1, 2],
+      "description": "MDC.02 Mining Activity Status: 0=Abandoned, 1=Active, 2=Non-active"
+    },
+    "MineralCode": {
+      "type": "string",
+      "description": "MDC.03 Mineral - HS Code (primary) or IMA Code. For designated minerals: 7108.12.00 (Gold/IMA1960-A), 2609.00.00 (Cassiterite/IMA1960-001), 2611.00.00 (Wolframite/IMA2000-014), 2615.90.00 (Columbite-Tantalite/IMA1979-A)"
+    },
+    "UnitOfMeasurement": {
+      "type": "string",
+      "enum": ["TNE", "KGM"],
+      "description": "MDC.07 Unit of measurement - TNE (tonne), KGM (kilogram). The unit of measure shall be chosen from the lists in UN/ECE Recommendation N°. 20 'Codes for Units of Measure Used in International Trade'"
+    },
+    "LicenseType": {
+      "type": "string",
+      "enum": ["claim", "exploration_permit", "mining_license", "artisanal_permit", "unlicensed", "other"],
+      "description": "MDC.04 License Type"
+    },
+    "CoCRole": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4, 5, 6, 7, 8],
+      "description": "MDC.05 CoC Roles: 1=Miner, 2=Trader (in-country), 3=Shipper, 4=Processor, 5=Warehouse, 6=Importer, 7=Exporter, 8=Government"
+    },
+    "OriginatingOperation": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4, 5, 6, 7, 8],
+      "description": "MDC.06 Originating operations: 1=Production, 2=Purchase, 3=Combination/Aggregation, 4=Processing, 5=Transportation, 6=Storage/Warehousing, 7=Import, 8=Export. The originating operation can be combined (e.g., 2;3;4 for Purchase, Combination, Processing)"
+    },
+    "MineSiteIdFormat": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}-[+-]?[0-9]+\\.[0-9]{4}[+-][0-9]+\\.[0-9]{4}-[0-9]+$",
+      "description": "ICGLR Mine Site ID format: CC-[Lat]-[Long]-NNNNN (e.g., RW-1.9641+30.0619-12345). A unique mine site identification number to be used at the level of ICGLR member states. Will follow the rules established by ICGLR for reporting and should be present if the data record needs to be reported as-is to ICGLR"
+    }
+  }
+}

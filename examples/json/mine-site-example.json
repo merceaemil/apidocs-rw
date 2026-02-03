@@ -1,0 +1,112 @@
+{
+  "icglrId": "RW-1.9641+30.0619-00001",
+  "addressCountry": "RW",
+  "nationalId": "RW-MINE-2024-001",
+  "certificationStatus": 1,
+  "activityStatus": 1,
+  "mineSiteLocation": {
+      "geolocalization": {
+        "lat": -1.9641,
+        "long": 30.0619
+      },
+    "nationalCadasterLocalization": "Rwanda Mining Cadaster - Sector 12, Block 5",
+    "localGeographicDesignation": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-02",
+      "subnationalDivisionL1Text": "Southern",
+      "subnationalDivisionL2": "Nyaruguru District",
+      "addressLocalityText": "Muhanga"
+    },
+    "polygon": {
+      "type": "Polygon",
+      "coordinates": [[[30.0619, -1.9641], [30.0623, -1.9641], [30.0623, -1.9637], [30.0619, -1.9637], [30.0619, -1.9641]]]
+    },
+    "altitude": 1500
+  },
+  "mineral": [
+    "7108.12.00",
+    "2611.00.00"
+  ],
+  "license": [
+    {
+      "licenseType": "mining_license",
+      "licenseId": "RW-ML-2024-001",
+      "owner": {
+        "identifier": "COMP-RW-001",
+        "name": "Rwanda Mining Corporation Ltd",
+        "legalAddress": {
+          "country": "RW",
+          "subnationalDivisionL1": "RW-01",
+          "subnationalDivisionL1Text": "City of Kigali",
+          "addressLocalityText": "Kigali"
+        },
+        "physicalAddress": {
+          "country": "RW",
+          "subnationalDivisionL1": "RW-01",
+          "subnationalDivisionL1Text": "City of Kigali",
+          "addressLocalityText": "Kigali"
+        },
+        "tin": "123456789",
+        "businessType": "Limited Liability Company",
+        "contactDetails": {
+          "legalRepresentative": "John Doe",
+          "contactPhoneNumber": "+250788123456",
+          "contactEmail": "contact@rwandamining.rw"
+        }
+      },
+      "grantedDate": "2024-01-15",
+      "expiringDate": "2029-01-14",
+      "licenseStatus": "1",
+      "coveredCommodities": [
+        "7108.12.00",
+        "2611.00.00"
+      ]
+    }
+  ],
+  "owner": {
+    "identifier": "COMP-RW-001",
+    "name": "Rwanda Mining Corporation Ltd",
+    "legalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "physicalAddress": {
+      "country": "RW",
+      "subnationalDivisionL1": "RW-01",
+      "subnationalDivisionL1Text": "City of Kigali",
+      "addressLocalityText": "Kigali"
+    },
+    "tin": "123456789",
+    "businessType": "Limited Liability Company",
+    "contactDetails": {
+      "legalRepresentative": "John Doe",
+      "contactPhoneNumber": "+250788123456",
+      "contactEmail": "contact@rwandamining.rw"
+    }
+  },
+  "allowedTags": 100,
+  "operator": [],
+  "inspection": [
+    {
+      "inspectionId": "PS-2024-03-15-10-30",
+      "inspectionDate": "2024-03-15",
+      "inspectionResponsible": "Rwanda Mines, Petroleum and Gas Board - Peter Smith",
+      "inspectionResult": 1,
+      "inspectionReport": "https://reports.rmb.rw/inspections/PS-2024-03-15-10-30.pdf",
+      "inspectionPurpose": "Annual certification inspection",
+      "inspectionResults": "Mine site meets all ICGLR certification requirements. No violations found.",
+      "inspectorName": "Peter Smith",
+      "inspectorPosition": "Senior Mining Inspector",
+      "governmentAgency": "Ministry of Mines, Rwanda",
+      "governmentId": "GOV-RW-001"
+    }
+  ],
+  "statusChange": [
+    {
+      "dateOfChange": "2024-03-15",
+      "newStatus": 1
+    }
+  ]
+}
