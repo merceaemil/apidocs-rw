@@ -918,4 +918,4 @@ The DMTS API has a **very low compatibility (5-8%)** with the Rwanda Mineral Dat
 
 ---
 
-*This report provides a comprehensive analysis of what the DMTS API needs to implement to comply with the Rwanda Mineral Data Interoperability Standard Version 2.3.0. For questions or clarifications, contact the Rwanda Mines, Petroleum and Gas Board.*
+*This report provides a comprehensive analysis of what the DMTS API needs to implement to comply with the Rwanda Mineral Data Interoperability Standard Version 2.3.0.*
